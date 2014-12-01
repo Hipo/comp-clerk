@@ -241,6 +241,15 @@ $.imgOverlayer = function (img, overlays, infoContainer, options) {
             
             $contentEditor.val(overlay.description);
         } else {
+            if (overlays.length == 0) {
+                $.extend(options, {
+                    x1: 10,
+                    y1: 10,
+                    x2: 60,
+                    y2: 60
+                });
+            }
+            
             $contentEditor.val("");
         }
 
